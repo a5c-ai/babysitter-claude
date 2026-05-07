@@ -1,6 +1,6 @@
 {
   "name": "babysitter",
-  "version": "5.0.1-staging.5311eef77202",
+  "version": "5.0.1-staging.999cafb91f80",
   "description": "Orchestrate complex, multi-step workflows with event-sourced state management, hook-based extensibility, and human-in-the-loop approval",
   "author": {
     "name": "a5c.ai"
@@ -30,7 +30,8 @@
     "PostToolUse": "hooks/babysitter-proxied-post-tool-use.sh",
     "SubagentStop": "hooks/babysitter-proxied-subagent-stop.sh",
     "Notification": "hooks/babysitter-proxied-notification.sh",
-    "PreCompact": "hooks/babysitter-proxied-pre-compact.sh"
+    "PreCompact": "hooks/babysitter-proxied-pre-compact.sh",
+    "SessionEnd": "hooks/babysitter-proxied-session-end.sh"
   },
   "commands": [],
   "skills": [
