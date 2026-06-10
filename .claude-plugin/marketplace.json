@@ -1,0 +1,18 @@
+{
+  "name": "a5c.ai",
+  "owner": {
+    "name": "a5c.ai",
+    "email": "support@a5c.ai"
+  },
+  "plugins": [
+    {
+      "name": "babysitter",
+      "source": "./",
+      "description": "Orchestrate complex, multi-step workflows with event-sourced state management, hook-based extensibility, and human-in-the-loop approval",
+      "version": "5.1.1-staging.e49e1a8e198d",
+      "author": {
+        "name": "a5c.ai"
+      }
+    }
+  ]
+}
