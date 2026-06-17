@@ -91,16 +91,6 @@
           }
         ]
       }
-    ],
-    "BeforePromptBuild": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "adapters-hooks invoke --adapter claude --handler \"bash ${CLAUDE_PLUGIN_ROOT}/hooks/babysitter-proxied-before-prompt-build.sh\" --json"
-          }
-        ]
-      }
     ]
   }
 }
