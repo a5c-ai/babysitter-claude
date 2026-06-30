@@ -71,7 +71,7 @@ The plugin dispatches native Babysitter hooks from these priority tiers:
 
 1. `.a5c/hooks/<hook-type>/`
 2. `~/.config/babysitter/hooks/<hook-type>/`
-3. `plugins/babysitter/hooks/<hook-type>/`
+3. `plugins/babysitter-unified/hooks/<hook-type>/`
 
 Common hook points:
 
@@ -86,9 +86,9 @@ Common hook points:
 
 ## Key Files
 
-- `plugins/babysitter/plugin.json`
-- `plugins/babysitter/hooks/`
-- `plugins/babysitter/skills/babysit/SKILL.md`
+- `plugins/babysitter-unified/plugin.json`
+- `plugins/babysitter-unified/hooks/`
+- `plugins/babysitter-unified/skills/babysit/SKILL.md`
 - `library/`
 
 ## Installation
@@ -97,14 +97,20 @@ Install the Claude Code plugin through the Claude plugin installer or the SDK
 CLI helper:
 
 ```bash
-claude plugin marketplace add a5c-ai/babysitter
+claude plugin marketplace add a5c-ai/babysitter-claude
 claude plugin install --scope user babysitter@a5c.ai
 ```
 
-The SDK helper runs the same published Claude plugin flow:
+The SDK helper runs the same published Claude plugin flow. Install the Babysitter CLI once, then choose user or project scope:
 
 ```bash
+npm install -g @a5c-ai/babysitter
+
+# User-scope install
 babysitter harness:install-plugin claude-code
+
+# Project-scope install
+babysitter harness:install-plugin claude-code --workspace /path/to/repo
 ```
 
 Then restart Claude Code. The installer does not materialize a repo-local
@@ -113,8 +119,10 @@ plugin copy.
 ## Claude Cowork Installation
 
 Claude Cowork can install this same plugin package without any plugin-structure
-changes. This repository already includes a Claude marketplace manifest at
-`.claude-plugin/marketplace.json` that points at `plugins/babysitter/`.
+changes. This repository includes a Claude marketplace manifest at
+`.claude-plugin/marketplace.json` that points to the generated external
+`a5c-ai/babysitter-claude` marketplace repo, while the maintained source in
+this repo lives under `plugins/babysitter-unified/`.
 
 ### Personal install from this repository
 
